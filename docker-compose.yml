@@ -1,10 +1,10 @@
 version: '2'
 services:
-  mt:
-    image: stormerider/docker-nginx-php-fpm
+  www:
+    image: stormerider/docker-apache-php
     volumes:
-      - "./www:/usr/share/nginx/www/"
-      - "./nginx-logs:/var/log/nginx"
+      - "./www:/var/www/html"
+      - "./apache-logs:/var/log/apache2"
     ports:
       - "8010:80"
     restart: always
